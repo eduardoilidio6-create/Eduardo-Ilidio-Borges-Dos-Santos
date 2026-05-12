@@ -1,0 +1,97 @@
+!pip install langchain langchain-community langchain-groq beautifulsoup4
+
+
+
+
+
+import os
+
+import warnings
+
+warnings.filterwarnings("ignore")
+
+
+
+# IMPORTANTE: Removi o YoutubeLoader que não estava sendo usado para evitar travamentos de biblioteca
+
+from langchain_groq import ChatGroq
+
+from langchain_core.prompts import ChatPromptTemplate
+
+
+
+# 1. Configurações
+
+os.environ['USER_AGENT'] = 'MeuBot/1.0'
+
+os.environ['GROQ_API_KEY'] = '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'
+
+
+
+print("Iniciando sistema...")
+
+
+
+try:
+
+  # 2. Inicializar modelo
+
+  chat = ChatGroq(model='llama-3.3-70b-versatile')
+
+  print("Modelo carregado com sucesso.")
+
+
+
+  # 3. Conteúdo fixo
+
+  conteudo_video = "O vídeo fala sobre a história da humanidade, desde hominídeos há 7 milhões de anos até a IA atual."
+
+
+
+  # 4. Template
+
+  template = ChatPromptTemplate.from_messages([
+
+    ("system", "Responda apenas com base no conteúdo. Se não souber, diga apenas: 'Eu não sei essa informação.'"),
+
+    ("user", "Conteúdo: {documentos_informados}\nPergunta: {pergunta_do_usuario}")
+
+  ])
+
+  
+
+  chain = template | chat
+
+  print("Lógica configurada.")
+
+
+
+  # 5. Interação - O PROBLEMA PODE ESTAR AQUI
+
+  print("\n--- AGUARDANDO DIGITAÇÃO ---")
+
+  pergunta = input("Digite sua pergunta aqui: ")
+
+
+
+  if pergunta:
+
+    print("Enviando para a IA...")
+
+    resposta = chain.invoke({
+
+      "documentos_informados": conteudo_video,
+
+      "pergunta_do_usuario": pergunta
+
+    })
+
+    print("\nRESPOSTA:")
+
+    print(resposta.content)
+
+
+
+except Exception as e:
+
+  print(f"\nERRO DETECTADO: {e}")

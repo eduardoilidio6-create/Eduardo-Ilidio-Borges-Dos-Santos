@@ -54,7 +54,8 @@ Tenho interesse em construir projetos que contribuam para meu aprendizado e evol
 
 ## 📂 Projetos
 
-Aqui você encontrará projetos acadêmicos, exercícios e aplicações desenvolvidas durante minha jornada de aprendizado em Engenharia de Software.
+Chatbot para ler PDF
+O Meu Primeiro Chatbot Especialista
 
 ---
 

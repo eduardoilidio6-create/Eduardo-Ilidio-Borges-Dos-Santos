@@ -1,3 +1,52 @@
+# 🤖 Minha_IA - Assistente com LangChain e Groq
+
+Projeto desenvolvido em Python utilizando LangChain, Groq API e BeautifulSoup para criar um assistente de IA capaz de responder perguntas com base em fontes específicas de informação.
+
+## 📚 Sobre o projeto
+
+O sistema funciona em modo restrito, respondendo apenas com informações presentes em:
+
+- Conteúdo extraído de um site
+- Dados simulados de um PDF
+
+O objetivo do projeto é demonstrar conceitos de:
+
+- Integração com modelos de IA
+- Engenharia de Prompt
+- Extração de dados Web Scraping
+- Processamento de texto
+- Uso de APIs de Inteligência Artificial
+
+## 🛠 Tecnologias utilizadas
+
+- Python
+- LangChain
+- Groq API
+- BeautifulSoup4
+- Requests
+
+## ⚙️ Funcionalidades
+
+- Extração automática de conteúdo de páginas web
+- Integração com modelo LLM da Groq
+- Sistema de perguntas e respostas
+- Restrição de respostas com base em documentos definidos
+- Simulação de leitura de PDF
+
+## 🎯 Objetivo acadêmico
+
+Projeto criado para fins de aprendizado em Engenharia de Software, explorando conceitos de Inteligência Artificial, automação e integração de APIs.
+
+## 🚀 Aprendizados
+
+Durante o desenvolvimento deste projeto foram praticados conceitos como:
+
+- Manipulação de APIs
+- Estruturação de prompts
+- Tratamento de dados
+- Desenvolvimento de aplicações em Python
+- Consumo de conteúdo web
+
 import os
 
 import requests

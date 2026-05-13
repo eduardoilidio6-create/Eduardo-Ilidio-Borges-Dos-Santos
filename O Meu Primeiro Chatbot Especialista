@@ -1,4 +1,88 @@
-!pip install langchain langchain-community langchain-groq beautifulsoup4
+# 🤖 Aegis AI — Assistente Inteligente com LangChain e Groq
+
+Projeto desenvolvido em Python com foco na integração de Inteligência Artificial, processamento de dados e engenharia de prompts, utilizando LangChain e a API Groq para construção de um assistente virtual baseado em fontes controladas de informação.
+
+---
+
+# 📖 Visão Geral
+
+O projeto consiste em um assistente de IA em modo restrito, capaz de responder perguntas utilizando exclusivamente conteúdos previamente definidos pelo sistema.
+
+As informações utilizadas pelo modelo são obtidas através de:
+
+- Extração de conteúdo de páginas web
+- Dados textuais simulando documentos PDF
+- Processamento e organização contextual das informações
+
+O sistema foi projetado para impedir o uso de conhecimento externo do modelo, garantindo respostas limitadas às fontes fornecidas.
+
+---
+
+# ⚙️ Funcionalidades
+
+- Extração automática de conteúdo web utilizando Web Scraping
+- Processamento de texto com BeautifulSoup
+- Integração com modelos LLM através da API Groq
+- Controle contextual via Engenharia de Prompt
+- Sistema interativo de perguntas e respostas
+- Restrição de respostas baseada em documentos específicos
+- Simulação de leitura e interpretação de PDF
+
+---
+
+# 🛠️ Tecnologias Utilizadas
+
+- Python
+- LangChain
+- Groq API
+- BeautifulSoup4
+- Requests
+- Prompt Engineering
+
+---
+
+# 🧠 Conceitos Aplicados
+
+Durante o desenvolvimento do projeto foram aplicados conceitos relacionados a:
+
+- Inteligência Artificial
+- Engenharia de Software
+- Integração de APIs
+- Processamento de Linguagem Natural (NLP)
+- Extração de Dados
+- Manipulação de Conteúdo Web
+- Estruturação de Prompts
+- Desenvolvimento Back-end
+
+---
+
+# 🎯 Objetivo do Projeto
+
+O principal objetivo deste projeto é demonstrar a construção de um sistema inteligente capaz de:
+
+- Consumir dados externos
+- Organizar informações contextuais
+- Restringir respostas com base em fontes específicas
+- Simular o comportamento de um assistente virtual controlado
+
+Além disso, o projeto contribui para o aprendizado prático de tecnologias modernas utilizadas no desenvolvimento de aplicações com Inteligência Artificial.
+
+---
+
+# 🚀 Estrutura do Sistema
+
+O funcionamento do projeto ocorre em quatro etapas principais:
+
+1. Coleta de dados do site através de Web Scraping
+2. Organização das informações em contexto estruturado
+3. Envio do contexto ao modelo LLM
+4. Geração de respostas limitadas às fontes fornecidas
+
+---
+
+# 🔒 Segurança e Boas Práticas
+
+Para maior segurança, credenciais da API devem ser armazenadas utilizando variáveis de ambiente (`.env`), evitando exposição de chaves privadas no código-fonte.
 
 
 
